@@ -3,4 +3,7 @@ source "https://rubygems.org"
 gem "rack"
 gem "puma"
 
-gem "minitest"
+group :development, :test do
+  gem "rake"
+  gem "minitest"
+end
