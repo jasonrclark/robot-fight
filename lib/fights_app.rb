@@ -8,6 +8,9 @@ class FightsApp
     @fights.each do |fight|
       response.write(fight)
       response.write("\n")
+      response.write("*" * 80)
+      response.write("\n")
+      response.write("\n")
     end
     response.finish
   end
