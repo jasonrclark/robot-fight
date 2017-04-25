@@ -6,6 +6,7 @@ gem "rack"
 gem "puma"
 
 group :development, :test do
+  gem "pry"
   gem "rake"
   gem "minitest"
 end

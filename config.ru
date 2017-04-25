@@ -1,9 +1,12 @@
 $LOAD_PATH << File.expand_path(File.join(__FILE__, "..", "lib"))
 
-class Application
-  def call(env)
-    [200, {}, ["Beep"]]
-  end
-end
+require 'bots'
+require 'bot_app'
+require 'root_app'
 
-run Application.new
+#use Rack::Reloader
+
+run Rack::URLMap.new(
+  "/bot" => BotApp.new,
+  "/"    => RootApp.new
+)
