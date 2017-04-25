@@ -1,4 +1,6 @@
 class Fights
+  KEEP = 20
+
   attr_reader :fights
 
   def initialize
@@ -13,6 +15,6 @@ class Fights
 
   def add(result)
     @fights.insert(0, result)
-    @fights = @fights.take(10)
+    @fights = @fights.take(KEEP)
   end
 end
