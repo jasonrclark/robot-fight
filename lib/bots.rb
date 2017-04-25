@@ -1,29 +1,16 @@
 class Bots
-  def self.[](index)
-    @bots[index.to_i]
-  end
-
-  def self.add(bot)
-    @bots ||= []
-    @bots << bot
-  end
-
-  def self.each
-    @bots.each do |bot|
-      yield bot
-    end
-  end
-
-  add <<-EOS
- ..............
- .            .
-[.  *      *  .]
- .      '     .
- .     ~~     .
- ..............
+  def initialize
+    @bots = []
+    add <<-EOS
+ .................
+ .               .
+[.    *     *    .]
+ .       '       .
+ .       ~       .
+ .................
  EOS
 
-  add <<-EOS
+    add <<-EOS
  --------------
  |            |
 <|  -|-  -|-  |>
@@ -32,13 +19,30 @@ class Bots
  --------------
  EOS
 
-  add <<-EOS
-    --------
-  <          >
- <  <.>  <.>  >
- <            >
- <     --     >
-   <-------->
+    add <<-EOS
+   --------
+ <          >
+<  <.>  <.>  >
+<     --     >
+  <-------->
  EOS
+  end
 
+  def [](index)
+    @bots[index.to_i]
+  end
+
+  def add(bot)
+    @bots << bot
+  end
+
+  def each
+    @bots.each do |bot|
+      yield bot
+    end
+  end
+
+  def sample
+    @bots.sample
+  end
 end
