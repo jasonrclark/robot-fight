@@ -4,6 +4,7 @@ GEM
     coderay (1.1.1)
     method_source (0.8.2)
     minitest (5.10.1)
+    newrelic_rpm (4.0.0.332)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -18,6 +19,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
+  newrelic_rpm
   pry
   puma
   rack

@@ -1,5 +1,7 @@
 $LOAD_PATH << File.expand_path(File.join(__FILE__, "..", "lib"))
 
+require 'newrelic_rpm'
+
 require 'bots'
 require 'bot_app'
 
